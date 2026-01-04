@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sataditya Jana Projects</title>
+        <style>
+            #logo_table {
+                margin: 0;
+                background-color: rgb(17, 17, 17);
+            }
+
+            /* The menu button */
+  .menu-btn {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  
+  /* Gradient text setup */
+  background: linear-gradient(90deg, red, pink, blue);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: gradientFlow 4s ease-in-out infinite;
+}
+
+/* Optional hover for extra shine */
+.menu-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for moving gradient */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.menu_table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+/* Animated gradient border flow */
+.menu_table::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #ff0000, #ff66cc, #00ffff, #ff0000);
+  background-size: 300% 300%;
+  z-index: -1;
+  filter: blur(8px);
+  animation: neonFlow 6s linear infinite;
+}
+
+/* Table cell styling */
+.menu_table td, .menu_table th {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 20px;
+  text-align: center;
+}
+
+/* Inner pulse animation */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 30px #ff66cc, 0 0 60px #ff66cc;
+  }
+}
+
+/* Gradient flow animation */
+@keyframes neonFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+  /* Sidebar styling */
+  .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, black, grey, white);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  overflow-x: hidden;
+  transition: width 0.4s;
+  padding-top: 60px;
+  z-index: 2;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  .sidebar a {
+  display: block;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(270deg, #FC7E3D, #3D3DFC, #69FC3D);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShift 4s ease-in-out infinite;
+  transition: 0.2s;
+}
+
+/* Hover effect (optional, makes it pop) */
+.sidebar a:hover {
+  transform: translateX(8px);
+}
+
+/* Keyframes for gradient movement */
+@keyframes textShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  .sidebar a {
+  display: block;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Neon pulse on hover */
+.sidebar a:hover {
+  background-color: #575757;
+  color: #fff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+  animation: neonPulse 1.5s infinite;
+}
+
+/* Keyframes for glowing pulse */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+}
+
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .background {
+    width: 100%;
+    height: 100vh; /* full screen height */
+    border-collapse: collapse;
+  }
+
+  .background td {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  /* Make the video fill the cell */
+  .background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid gold;
+  border-radius: 12px;
+  overflow: visible;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+
+.footer {
+  background-image: linear-gradient(90deg, black, rgb(43, 42, 42), rgb(83, 83, 83));
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.footer_text {
+  color: #00ff66;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  animation: blinkZoom 2.5s ease-in-out infinite;
+}
+
+/* Blink + Zoom animation */
+@keyframes blinkZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+.footer_btn {
+  position: relative;
+  display: inline-block;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.footer_btn_text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+.footer_btn::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, orange, purple, blue, violet, red, orange);
+  background-size: 400% 400%;
+  z-index: 0;
+  animation: borderFlow 5s linear infinite;
+}
+
+.footer_btn::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: black;
+  border-radius: 7px;
+  z-index: 1;
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer_btn:hover::before {
+  filter: brightness(1.4);
+}
+
+ #Des1 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des1 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des1::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des1.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des1::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des1::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des1::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des1 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des1 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des1 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+  #Des2 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des2 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des2::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des2.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des2::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des2::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des2::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des2 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des2 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des2 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+  #Des3 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des3 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des3::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des3.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des3::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des3::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des3::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des3 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des3 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des3 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+  #Des4 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des4 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des4::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des4.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des4::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des4::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des4::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des4 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des4 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des4 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+  #Des5 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des5 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des5::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des5.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des5::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des5::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des5::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des5 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des5 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des5 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+  #Des6 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des6 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des6::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des6.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des6::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des6::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des6::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des6 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des6 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des6 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#Des7 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des7 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des7::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des7.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des7::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des7::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des7::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des7 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des7 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des7 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#Des8 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des8 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des8::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des8.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des8::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des8::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des8::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des8 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des8 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des8 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#Des9 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  color: #eee;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #111;
+  z-index: 1000;
+  padding: 60px 40px 40px 40px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Background video */
+.Des9 video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills sidebar area */
+  z-index: -1;
+  opacity: 0.35; /* dim for readability */
+  filter: blur(2px); /* optional aesthetic touch */
+}
+
+/* add a pseudo-element to create real scrollable space */
+#Des9::after {
+  content: "";
+  display: block;
+  height: 100px; /* gives bottom breathing space */
+}
+
+/* When sidebar is open */
+#Des9.open {
+  transform: translateX(0);
+}
+
+/* Scrollbar styling */
+#Des9::-webkit-scrollbar {
+  width: 8px;
+}
+
+#Des9::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+#Des9::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Text styles */
+#Des9 h1 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 8px;
+}
+
+#Des9 h3 {
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#Des9 p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+/* Base button */
+.btn {
+  background: none;
+  border: 2px solid #0ff;
+  color: #0ff;
+  font-size: 20px;
+  padding: 14px 36px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #0ff;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+/* Hover animation */
+.btn:hover {
+  animation: pulse 1s infinite alternate;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #0ff, 0 0 60px #00f;
+}
+
+/* Neon pulse effect */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #0ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00f, 0 0 40px #0ff, 0 0 80px #00f;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.title:hover {
+  cursor: pointer;
+  animation: neonPulse 1.5s infinite alternate;
+}
+
+/* Neon pulse keyframes */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 
+      0 0 5px #ff00ff,
+      0 0 10px #10ff30,
+      0 0 20px #00c6ff;
+  }
+  50% {
+    text-shadow: 
+      0 0 15px #ff00ff,
+      0 0 30px #10ff30,
+      0 0 45px #00c6ff;
+  }
+  100% {
+    text-shadow: 
+      0 0 5px #ff00ff,
+      0 0 10px #10ff30,
+      0 0 20px #00c6ff;
+  }
+}
+
+.label,
+.status {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.label {
+  color: aqua;
+}
+
+.status {
+  color: #10ff30;
+  font-weight: bold;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+        <table width="100%" id="logo_table">
+            <tr>
+                <th>
+                    <img src="Frontpage/Logo.png" alt="">
+                </th>
+            </tr>
+        </table>
+        <!-- Menu button -->
+        <table class="menu_table">
+            <tr>
+                <td>
+                    <button class="menu-btn" onclick="openSidebar()">☰ Menu</button>
+                </td>
+            </tr>
+        </table>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <span class="close-btn" onclick="closeSidebar()">×</span>
+  <a href="home.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="members.html">Members</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<table class="background">
+  <tr>
+    <td>
+      <video autoplay muted loop>
+        <source src="48569-454825064_small.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      <div class="overlay">
+        <table class="overtable" width="100%">
+          <tr>
+            <td>
+              <button class="btn" onclick="openDes('Des1')">Cardiac Care</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <button class="btn" onclick="openDes('Des2')">Cancer Biology</button>
+            </td>
+          </tr>
+          <tr>
+            <td> 
+                <button class="btn" onclick="openDes('Des3')">Neurocritical Care</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <button class="btn" onclick="openDes('Des4')">Epidemiological Modeling</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <button class="btn" onclick="openDes('Des5')">Cardiovascular Medicine</button>
+            </td>
+          </tr>
+            <td>
+                <button class="btn" onclick="openDes('Des6')">Therapeutic Medicine</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn" onclick="openDes('Des7')">Climate Change</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn" onclick="openDes('Des8')">Thermoregulatory Disease</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn" onclick="openDes('Des9')">Biomedical Cybersecurity</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<div id="Des1" class="Des1">
+  <video autoplay muted loop class="bg-video">
+    <source src="cardiac care.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des1')">&times;</span>
+  <h1 style="text-align: justify;">Heart Attack Proximate: Finding the Solution for Early Pre-Hospital Heart Attack Detection</h1>
+  <h2 style="color: aqua;">Introduced By: Dr. Azhar Khan</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status">Completed</h2>
+  <br></br>
+
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Ritam Panda, Dr. Tahir Hussian (Co-PI), Dr. Shrawan Kumar (Co-PI), Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCRIPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+      The “Heart Attack Proximate” project is a pioneering initiative aimed at transforming how heart attacks are detected before patients reach the hospital. Traditional diagnostic methods, like ECGs, symptom-based assessments, and imaging, often fall short in emergency or low-resource settings due to their reliance on specialized equipment and expert interpretation. This project introduces a novel, digitally autonomous system that uses real-time biometric data to predict heart attack risk with high precision, accessibility, and speed.
+      
+      <br><br>
+      
+      At the core of the system is a smartwatch-integrated sensor that continuously monitors heart rate, blood pressure, and oxygen saturation (SpO₂) at three intervals: 0, 5, and 10 minutes. These readings are processed through a unique mathematical model based on a cause–event–effect principle. The model interprets physiological fluctuations as dynamic vectors within a 4D probabilistic–deterministic framework. This allows the system to quantify not only the likelihood of a heart attack but also its estimated time of onset. Unlike conventional AI or machine learning models that often function as opaque “black boxes,” the Heart Attack Proximate System offers full transparency and interpretability, making it more trustworthy and actionable for clinicians and users alike.
+      
+      <br><br>
+      
+      The software workflow is designed for real-time responsiveness. Incoming biometric data is scaled and normalized to account for individual variability, then analyzed through a correlation-based algorithm that integrates all three vital signs. This holistic approach ensures that the system doesn’t rely on isolated metrics but instead evaluates the interplay between heart rate, blood pressure, and SpO₂ to determine cardiac risk. The final output includes a risk score and a predicted onset time, both of which are displayed through an intuitive web-based interface.
+      
+      <br><br>
+      
+      To validate the system’s performance, simulations were conducted using synthetic patient data across multiple sample sizes. The Heart Attack Proximate model was benchmarked against classical machine learning and advanced deep learning architectures, consistently outperforming them in accuracy, latency, and explainability. The project’s results demonstrate a perfect performance index of 100, highlighting its potential as a game-changing tool in emergency cardiac care.
+      
+      <br><br>
+      
+      This project not only showcases technical innovation but also reflects a deep commitment to global health equity. By enabling early detection in pre-hospital environments, especially in underserved regions, it offers a scalable, cost-effective solution that could save countless lives. The Heart Attack Proximate System represents a bold step toward making predictive diagnostics more accessible, interpretable, and impactful.
+    </p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des2" class="Des2">
+  <video autoplay muted loop class="bg-video">
+    <source src="cancer.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des2')">&times;</span>
+  <h1 style="text-align: justify;">Cancer Proximate: Digital Non-Invasive Three-Phased Early Cancer and Carcinogenic Gene Detection Protocol System</h1>
+  <h2 style="color: aqua;">Introduced By: Miss Aditi Kulshreshtha and Mr. Sataditya Jana</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status" style="color: yellow;">Incomplete</h2>
+  <br></br>
+  
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Aditi Kulshreshtha (Lead), Sataditya Jana (Co-Lead), Dr. Shams Iqbal (Co-PI), Dr. Shabbir Haque (Co-PI), Dr. Pradeep Kumar (Co-PI), Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCIRPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+
+      “Cancer Proximate” is a groundbreaking digital health project designed to revolutionize early cancer detection through a non-invasive, personalized, and scalable approach. Unlike traditional diagnostics that rely heavily on imaging, biopsies, or biomarker assays, often expensive, invasive, and inaccessible in rural or low-resource settings, this system leverages computational biology and probabilistic modeling to estimate cancer risk before symptoms appear. It integrates two major data domains: lifestyle behaviors and environmental exposures, transforming them into actionable insights for proactive health intervention.
+
+      <br><br>
+
+      The system begins with a structured digital questionnaire that captures individual lifestyle habits such as smoking, alcohol consumption, diet, physical activity, and medical history. Simultaneously, it uses satellite-derived geospatial data linked to the user’s residence and workplace to assess environmental exposures like air pollution, radiation, and chemical contaminants. These inputs are processed through a proprietary mathematical model that categorizes risk factors into main, sub-, and null contributors for each cancer type. By correlating these factors, the model generates a percentage-based risk score for multiple cancers, along with a breakdown of the top contributing elements.
+
+      <br><br>
+
+      What sets Cancer Proximate apart is its dynamic, three-phased framework. In Phase 1, it computes cancer risk based on external exposures and lifestyle patterns. Phase 2 incorporates physiological biomarkers, such as blood parameters and ELISA results, to refine predictions and identify pre-cancerous biological changes. Phase 3 uses these insights to recommend targeted gene screenings, reducing the need for full-panel genetic testing and improving diagnostic efficiency. Each phase builds upon the last, offering a layered, interpretable view of cancer risk progression.
+
+      <br><br>
+
+      The system’s outputs are displayed through a user-friendly web interface, making it accessible via smartphones and computers. This portability ensures that individuals in underserved areas can benefit from routine screening without needing specialized equipment or clinical visits. Moreover, the model is designed to update dynamically as new data becomes available, recalibrating risk profiles in real time.
+
+      <br><br>
+
+      By bridging the gap between environmental science, personal behavior, and predictive oncology, Cancer Proximate offers a powerful tool for preventive care. It empowers users and clinicians with early-warning signals that can guide lifestyle changes, prioritize follow-up testing, and ultimately reduce diagnostic delays. This project exemplifies how digital innovation can make healthcare more proactive, personalized, and equitable, especially in the fight against one of the world’s most complex and devastating diseases.
+</p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des3" class="Des3">
+  <video autoplay muted loop class="bg-video">
+    <source src="neurology.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des3')">&times;</span>
+  <h1 style="text-align: justify;">Probabilistic AI for Personalized Stroke Risk from Cardiovascular Dynamics</h1>
+  <h2 style="color: aqua;">Introduced By: Mr. Sataditya Jana</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status" >Completed</h2>
+  <br></br>
+  
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Ritam Panda, Dr. Tahir Hussian (Co-PI), Dr. Pradeep Kumar (Co-PI), Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCIRPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+Stroke Proximate is a next-generation digital health project designed to predict stroke onset in real time using a wearable-integrated, AI-powered framework. Strokes often occur without warning, and current diagnostic tools, like CT scans, MRIs, and symptom-based assessments, are limited in their ability to detect early-stage or silent strokes, especially in pre-hospital settings. This project addresses that gap by introducing a non-invasive, portable, and intelligent system that continuously monitors cardiovascular dynamics to assess stroke risk before symptoms appear.
+
+<br><br>
+
+The system relies on a smart wearable device equipped with a photoplethysmography (PPG) sensor that captures heart rate, blood pressure, and oxygen saturation at short intervals. These vital signs are processed through a proprietary mathematical model called the Proximate System, which serves as the core of the stroke prediction engine. The Proximate System is built on a cause–event–effect principle and operates within a 4D probabilistic–deterministic framework. It interprets physiological changes as dynamic vectors across time, mapping how fluctuations in vitals evolve into potential stroke events. This model doesn’t just detect abnormalities—it quantifies the likelihood, severity, and probable timing of a stroke, offering a predictive edge that traditional diagnostics lack.
+
+<br><br>
+
+What makes Stroke Proximate unique is its ability to correlate multiple cardiovascular parameters simultaneously. For example, a drop in oxygen saturation may trigger compensatory changes in heart rate and blood pressure, which the system interprets as early markers of neurogenic stress. These interdependencies are captured through probabilistic equations that calculate a personalized stroke risk score. If the score crosses a critical threshold, the system activates a symptom-reporting interface and estimates the likely region of cerebral involvement. In high-risk scenarios, it can even alert emergency contacts with real-time health data and geolocation.
+
+<br><br>
+
+The software has been rigorously tested using synthetic datasets across various sample sizes and randomized conditions. It consistently outperformed conventional machine learning models in accuracy, recall, and robustness, demonstrating its potential for real-world deployment. The user interface is designed for simplicity and clarity, making it accessible to both clinicians and individuals without medical training.
+
+<br><br>
+
+By integrating wearable technology with advanced probabilistic modeling, Stroke Proximate offers a transformative approach to stroke prevention. It empowers users with early-warning insights, supports timely clinical intervention, and extends diagnostic capabilities beyond hospital walls. As a model built on the Proximate System, it exemplifies how dynamic, mechanism-driven intelligence can reshape the future of personalized medicine.
+</p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des4" class="Des4">
+  <video autoplay muted loop class="bg-video">
+    <source src="epidemic.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des4')">&times;</span>
+  <h1 style="text-align: justify;">New Horizons in Epidemiology with Probabilistic Modeling: A Software in Pre-Predicting Outbreaks via Short-Termed Weather Analysis</h1>
+  <h2 style="color: aqua;">Introduced By: Mr. Sataditya Jana and Miss Aditi Kulshreshtha</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status" style="color: yellow;">Incomplete</h2>
+  <br></br>
+  
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Dr. Pradeep Kumar (Co-PI), Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCIRPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+Weather-Outbreak Proximate is a next-generation digital health project designed to forecast disease outbreaks using short-term weather pattern analysis. In an era marked by unpredictable epidemics and climate-driven health risks, this project introduces a novel software framework that bridges meteorological data with epidemiological modeling. The goal is to empower communities and health systems with early warnings for infectious, zoonotic, and cardiovascular disease outbreaks, before they escalate into public health emergencies.
+
+<br><br>
+
+At the heart of this innovation lies the Heart Attack Proximate model, a specialized extension of the Proximate System, a 4D probabilistic–deterministic framework originally developed to quantify real-time physiological risk. This model operates on a cause–event–effect principle, where environmental triggers (like temperature, humidity, precipitation, and wind speed) are treated as dynamic vectors that influence disease onset. Each weather parameter is classified as a main factor, sub-factor, or null factor depending on its role in disease propagation. The system then computes risk scores by correlating these factors through a layered mathematical structure, simulating how environmental conditions evolve into outbreak events over time.
+
+<br><br>
+
+Weather-Outbreak Proximate uses satellite-linked APIs to collect real-time and forecasted weather data for any location. This data is processed through the Heart Attack Proximate model to assess the probability of disease outbreaks across multiple timeframes—hourly, daily, and weekly. For example, extreme heat combined with low wind speed and high humidity may trigger a spike in heat stroke or cardiovascular events, while sudden rainfall and rising temperatures may signal increased risk for vector-borne diseases like dengue or malaria. The software translates these complex interactions into clear, interpretable risk percentages for each disease, displayed through a user-friendly web interface.
+
+<br><br>
+
+The system has been tested across global cities including Delhi, London, and New York, demonstrating over 90% alignment with real-world outbreak reports. By integrating weather analytics with disease pathogenesis, Weather-Outbreak Proximate offers a scalable, non-invasive, and cost-effective solution for public health surveillance. It enables timely interventions, such as targeted awareness campaigns, resource allocation, and behavioral guidance, especially in regions lacking advanced diagnostic infrastructure.
+
+<br><br>
+
+Ultimately, this project redefines how we anticipate and respond to disease outbreaks. By embedding the Heart Attack Proximate model within a weather-driven epidemiological framework, it transforms diffuse environmental data into actionable health intelligence, ushering in a new era of predictive, preventive, and personalized public health.
+</p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des5" class="Des5">
+  <video autoplay muted loop class="bg-video">
+    <source src="atherosclerosis.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des5')">&times;</span>
+  <h1 style="text-align: justify;">Early Atherosclerosis Prediction Integrating Cardiovascular Biomarkers and Human Health: A Probabilistic AI-Driven Model</h1>
+  <h2 style="color: aqua;">Introduced By: Dr. Azhar Khan</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status" >Completed</h2>
+  <br></br>
+  
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Aditi Singh, Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCIRPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+Atherosclerosis remains one of the deadliest silent diseases of the modern age, contributing heavily to the global burden of heart attacks and strokes. Detecting this condition in its early or pre-clinical stages has long been a challenge for doctors and scientists, mainly because existing diagnostic tools, like imaging or blood tests, are not sensitive enough to identify subtle signs before major damage occurs. This project introduces a next-generation software framework, designed to bridge that diagnostic gap by using artificial intelligence powered by probabilistic modeling to predict early atherosclerosis tendencies from common health indicators.
+
+<br><br>
+
+The model, written in Python, operates through a custom probabilistic algorithm that combines both biological and lifestyle parameters. It evaluates cardiovascular biomarkers such as blood pressure, cholesterol, glucose level, and BMI, while also accounting for lifestyle influences like diet, physical activity, stress, smoking, and alcohol consumption. These factors are mathematically interlinked through dependency and independency rules, enabling the system to estimate the probability of early arterial plaque formation long before symptoms appear. The software even includes an additional layer of analysis that examines the likelihood of genetic inheritance of atherosclerosis, creating a personalized health profile for each user.
+
+<br><br>
+
+To validate the model, it was tested on a clinical dataset of 1,701 patients derived from public health databases. The program achieved a striking 96.41% accuracy in predicting early-stage atherosclerosis and 97.1% accuracy in identifying hereditary tendencies. These results surpass the performance of many state-of-the-art artificial intelligence models currently used in cardiovascular diagnostics. The software’s graphical interface, developed with Python’s Tkinter library, allows healthcare professionals and researchers to input patient data and instantly receive a visualized risk assessment with actionable insights.
+
+<br><br>
+
+The broader goal of this project is to make early atherosclerosis detection accessible, non-invasive, and affordable. Its foundation lies in the Atherosclerosis Proximate System, a conceptual model that interlinks physiological and environmental variables to represent how biological and external realities collectively influence disease risk. By embedding this concept into an operational framework, the project represents a fusion of data science, probabilistic mathematics, and human health understanding.
+
+<br><br>
+
+Ultimately, the Atherosclerosis Proximate model aspires to redefine how early cardiovascular diseases are identified. Its potential integration with smart wearables and real-time monitoring tools can enable continuous tracking of health trends, empowering preventive care. Through intelligent prediction and personalization, this project moves a step closer to transforming a silent killer into a preventable condition.
+</p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des6" class="Des6">
+  <video autoplay muted loop class="bg-video">
+    <source src="microbiology.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des6')">&times;</span>
+  <h1 style="text-align: justify;">BTX-Beyond: Microbial Intelligence to Neuro-Nanotech Translation</h1>
+  <h2 style="color: aqua;">Introduced By: Mr. Sataditya Jana</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status" >Completed</h2>
+  <br></br>
+  
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Dr. Sadanand Pandey (Co-PI), Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCIRPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+This multidisciplinary project explores the convergence of microbial biotechnology, neuropharmacology, and predictive health modeling through three interconnected research papers focused on Botulinum Toxin Type B (BTX-B) and its translational potential. At its core, the project investigates how a naturally evolved bacterial neurotoxin, produced by <i>Clostridium botulinum</i> serotype B, can be reimagined not only as a therapeutic agent but also as a modular nanodevice and a platform for next-generation diagnostics and targeted delivery systems.
+</p>
+
+<br>
+
+<p>
+The first component of the project delves into the microbiological and genetic foundations of BTX-B-producing strains. It highlights the diversity of <i>Clostridium botulinum</i> serotype B, its toxin gene clusters, and the evolutionary mechanisms, such as horizontal gene transfer and plasmid-encoded biosynthesis, that influence toxin yield and specificity. This foundational understanding enables researchers to manipulate microbial pathways for safer and more efficient production of BTX-B, paving the way for engineered variants with tailored therapeutic profiles.
+</p>
+
+<br>
+
+<p>
+Building on this, the second paper reframes BTX-B as a biologically evolved nanomachine. It dissects the toxin’s tripartite structure, targeting, delivery, and catalytic domains, and maps each to principles in synthetic nanotechnology. The heavy chain’s dual receptor-binding mechanism mirrors multivalent ligand design, while the pH-triggered membrane translocation domain offers a biomimetic solution to endosomal escape, a major challenge in intracellular drug delivery. The zinc-dependent light chain, with its precise proteolytic activity, is proposed as a programmable actuator for site-specific biochemical interventions. This perspective opens up possibilities for hybrid bio-nano constructs that combine BTX-B modules with synthetic carriers, enabling neuron-specific targeting, controlled activation, and real-time biosensing.
+</p>
+
+<br>
+
+<p>
+The third paper extends BTX-B’s therapeutic horizon by exploring its underutilized potential in pain management and localized anesthesia. It reviews emerging evidence of BTX-B’s ability to inhibit nociceptive neurotransmitters and modulate pain receptors, suggesting its application in treating neuropathic pain, chronic myofascial conditions, and even acute dystonic crises. The project also envisions BTX-B’s integration with nanotechnology platforms, such as liposomes, polymeric nanoparticles, and exosomes, for enhanced delivery, stability, and precision. These innovations could transform BTX-B into a safer alternative to opioids, offering long-lasting relief without systemic side effects.
+</p>
+
+<br>
+
+<p>
+Together, these three studies form a cohesive narrative that positions BTX-B at the intersection of microbiology, chemistry, and nanomedicine. By combining genetic engineering, structural biology, and translational therapeutics, the project not only expands the clinical utility of BTX-B but also establishes it as a blueprint for designing multifunctional biological tools. This integrated approach holds promise for redefining neuropharmacology and advancing personalized medicine.
+</p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des7" class="Des7">
+  <video autoplay muted loop class="bg-video">
+    <source src="Climate Change.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des7')">&times;</span>
+  <h1 style="text-align: justify;">Climate Change Effects on Cardiopulmonary and Thermoregulatory Disease: A Scoping Review</h1>
+  <h2 style="color: aqua;">Introduced By: Dr. Azhar Khan</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status">Completed</h2>
+  <br></br>
+
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Aditi Singh, Kamel Haydar, Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCRIPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+      The paper reviews how climate change has become a major driver of cardiopulmonary and thermoregulatory diseases worldwide. Rising global temperatures, worsening air pollution, extreme heat and cold events, and unstable weather patterns interact with human physiology to increase cases of heat stroke, hypertension, ischemic heart disease, stroke, asthma, COPD, and respiratory infections. These effects are amplified in vulnerable groups such as the elderly, children, people with chronic illness, and communities with limited healthcare or high pollution exposure. The review emphasizes that climate change acts not only as an environmental crisis, but also as a biological stressor that disrupts cardiovascular, respiratory, and thermoregulatory systems.
+
+      <br></br>
+
+      The authors highlight how socioeconomic inequality, urbanization, displacement, and mental stress further worsen disease outcomes. They argue for interdisciplinary solutions that combine medicine, environmental science, technology, and policy — including emission control, climate-resilient cities, early-warning systems, AI-enabled health monitoring, and stronger public health infrastructure. The review concludes that climate change is now a central determinant of global health, demanding urgent preventive strategies, climate-adaptive healthcare, and coordinated global action to protect vulnerable populations and reduce future disease burden.
+    </p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des8" class="Des8">
+  <video autoplay muted loop class="bg-video">
+    <source src="Temperature.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des8')">&times;</span>
+  <h1 style="text-align: justify;">A Smart-Wearable Model with Real-Time Temperature and Cardiovascular Monitoring for Sudden Temperature-Based Illness Detection</h1>
+  <h2 style="color: aqua;">Introduced By: Mr. Sataditya Jana</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status" style="color: gold;">Incomplete</h2>
+  <br></br>
+
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Aditi Kulshreshtha (Co-Lead), Dr. Azhar Khan (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCRIPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+      The invention describes a smart-wearable system, mainly in the form of a smartwatch with a detachable smart ring, designed to detect and predict heat stroke and hypothermia in real time. These conditions often start quietly with almost no symptoms and then progress rapidly, while most existing medical tools are either non-portable, expensive, dependent on hospital settings, or only useful once symptoms have already appeared. The proposed wearable tackles that gap by combining thermal sensors, which continuously track body temperature trends, with photoplethysmography (PPG) sensors that monitor cardiovascular responses such as heart rate, estimated blood pressure, and oxygen saturation. Instead of depending only on temperature, the system’s software correlates temperature changes with corresponding cardiovascular fluctuations using probabilistic algorithms. Over structured monitoring windows at zero, ten, and twenty minutes, it evaluates the current risk, determines whether the condition is progressing, estimates severity, and even predicts the probable time window before a critical event may occur.
+
+      <br></br>
+      
+      When the calculated risk becomes high, the device is capable of automatically sending distress alerts to designated contacts, enabling authorized video monitoring, using GPS to identify nearby help centers, and placing emergency calls through an in-built SIM, even if the user cannot access their phone. To reduce false alarms, the system activates primarily when weather data suggests realistic environmental risk, such as heat waves or cold spells. The physical design of the device further supports accuracy, using layered light-insulated materials, optimized sensor placement, a detachable smart ring for flexible use, and seamless IoT or Bluetooth connectivity. Altogether, the invention aims to deliver a portable, affordable, predictive health-monitoring solution that addresses the shortcomings of current wearables and hospital-based technologies, offering earlier warnings and better protection against climate-driven thermal illnesses.
+    </p>
+  </h3>
+  </details>
+</div>
+
+<div id="Des9" class="Des9">
+  <video autoplay muted loop class="bg-video">
+    <source src="Cybersecurity.mp4" type="video/mp4">
+  </video>
+
+  <span class="close-btn" onclick="closeDes('Des9')">&times;</span>
+  <h1 style="text-align: justify;">Defending Medicare: Unleashing the Power of Anti-Vortex Technology against Hackers</h1>
+  <h2 style="color: aqua;">Introduced By: Mr. Sataditya Jana</h2>
+  <h2 class="label">Project Status:</h2>
+  <h2 class="status">Completed</h2>
+  <br></br>
+
+  <details>
+    <summary><h3 class="title">MEMBERS</h3></summary>
+    <h3>Sataditya Jana (Lead), Nitesh Kumar Vashist, Anitya Gupta (PI)</h3>
+  </details>
+  <details>
+    <summary><h3 class="title">PROJECT DESCRIPTION</h3></summary>
+    <h3 style="text-align: justify;">
+    <p>
+      The paper explores the rising risks facing Medicare and healthcare data systems as cyber-attacks and insider breaches become more frequent and sophisticated. It explains that healthcare databases contain both highly valuable business information and deeply sensitive patient data, making them prime targets. Traditional protection methods such as firewalls, anti-virus programs, access control systems, data masking, DLP solutions, IDPS tools, and encryption each contribute important defenses, but they operate in isolation and leave critical gaps. Cyber-attacks such as ransomware, DoS/APT campaigns, and network intrusions can still penetrate layered systems, while insiders with legitimate credentials can bypass restrictions altogether. As a result, organizations face financial damage, loss of trust, regulatory penalties, and compromised patient safety, highlighting the need for a more resilient, unified security architecture.
+
+      <br></br>
+
+      To address these vulnerabilities, the authors propose a hypothetical “anti-vortex” cyber-security model built around concepts from blockchain, analytical artificial intelligence, and edge computing. Confidential data is organized inside cubic data frames, surrounded by protective layers and controlled through complex L-shaped access pathways designed to isolate suspicious behavior. If an intrusion or misuse attempt occurs, the pathways lock and sacrifice only the smallest possible section of data instead of exposing the entire network. Analytical AI continuously monitors user activity, identifies abnormalities, detects insider misuse, and pinpoints the exact breach location in real time. Meanwhile, edge devices process data locally to reduce latency, prevent server overload, and keep the broader network functioning even when one compartment is compromised. The model also deploys virtual traps that “contain” attackers inside controlled security zones rather than allowing threats to spread.
+      
+      <br></br>
+
+      The paper argues that this combined approach could significantly improve resilience against advanced threats such as APTs, insider exploitation, coordinated cyber-attacks, and even physical theft of storage devices. Because each unit of data is compartmentalized and independently protected, the entire system does not collapse when one area is attacked. The authors suggest that such a framework could be particularly valuable in healthcare, research institutions, military databases, and other sectors handling critical information. However, they emphasize that the system remains theoretical and dependent on careful coding, real-world testing, continuous AI training, and adaptation to evolving attack strategies. Future development, integration with emerging technologies, and rigorous evaluation would be required before deployment at scale, but the model illustrates a promising direction for next-generation healthcare cyber-security architecture.
+     </p>
+  </h3>
+  </details>
+</div>
+
+<script>
+function openSidebar() {
+  document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+
+<script>
+function openDes(id) {
+  document.getElementById(id).classList.add('open');
+}
+function closeDes(id) {
+  document.getElementById(id).classList.remove('open');
+}
+</script>
+
+    </body>
+
+    <footer>
+      <table class="footer" width="100%">
+        <tr>
+          <th rowspan="2">
+            <img src="Frontpage/Shoolini Logo.png" alt="">
+          </th>
+          <th>
+            <h1 class="footer_text">This lab is owned by Shoolini University of Biotechnology and Management Sciences</h1>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <button onclick="location.href='https://shooliniuniversity.com/'" class="footer_btn"><h2 class="footer_btn_text">ABOUT US</h2></button>
+          </th>
+        </tr>
+      </table>
+    </footer>
+
+</html>
